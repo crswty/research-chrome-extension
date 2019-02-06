@@ -1,0 +1,16 @@
+#!/bin/bash
+
+scriptDir=$(dirname "$0")
+extension="$1"
+target="$2"
+dataDir="$scriptDir/.research-profile"
+
+echo "Launching Chrome. Press <Ctrl>+h in browser to download history"
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+  --load-extension=$scriptDir,$1 \
+  --user-data-dir=$dataDir  \
+  --no-first-run \
+  --profile-directory=Default \
+  $2 1>/dev/null 2>&1
+
+rm -rf $dataDir

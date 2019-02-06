@@ -1,0 +1,13 @@
+{
+   "name": "Experiment 1",
+   "manifest_version": 2,
+   "version": "0.0.0",
+   "description": "Experiment 1",
+   "icons": {},
+   "content_scripts": [
+    {
+      "matches": ["*://*.todays.events/*"],
+      "js": ["modification.js"]
+    }
+  ]
+ }
