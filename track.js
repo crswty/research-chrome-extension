@@ -25,7 +25,7 @@ document.addEventListener('keyup', handleKeyup)
 function downloadHistory() {
 
   let currentHistory = JSON.parse(localStorage.getItem('clicks'));
-  let content = "name\t-\tclassName" + currentHistory.join("\n")
+  let content = "name\t-\tclassName\n" + currentHistory.join("\n")
 
   var atag = window.document.createElement('a');
   atag.href = window.URL.createObjectURL(new Blob([content], {type: 'text'}))
